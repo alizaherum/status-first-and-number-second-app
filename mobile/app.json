@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "Procrastination Pattern Matcher",
+    "slug": "procrastination-pattern-matcher",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "ppm",
+    "userInterfaceStyle": "automatic",
+    "description": "Logs your delayed tasks and clusters them by category, time of day, and effort to surface what's actually triggering the procrastination.",
+    "primaryColor": "#4a3aa7",
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 220,
+          "resizeMode": "contain",
+          "backgroundColor": "#4a3aa7",
+          "dark": {
+            "backgroundColor": "#2f2566"
+          }
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.procrastinationpatternmatcher",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.yourcompany.procrastinationpatternmatcher",
+      "adaptiveIcon": {
+        "backgroundColor": "#4a3aa7",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

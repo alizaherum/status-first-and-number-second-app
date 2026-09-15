@@ -37,3 +37,9 @@ Each logged task is one document in the `tasks` collection:
 The live artifact is seeded with 64 synthetic-but-plausible logged tasks (via Claude's artifact database tool, not hardcoded in the page) so the patterns and clusters are populated the first time you open it. Add or delete your own tasks from the "Log a task" panel — the analysis recomputes live.
 
 If the page is opened somewhere the `db` capability isn't available (e.g. a raw file preview), it falls back to a small in-memory example dataset, clearly marked as illustrative, so the page never renders empty.
+
+## iOS app
+
+The `mobile/` directory is a standalone Expo/React Native (TypeScript) rebuild of the same app, aimed at the Apple App Store. It ports the same analysis engine (Wilson-score insights, k-means clustering) to a native UI, and stores tasks on-device via `AsyncStorage` instead of the web artifact's shared `db` capability — no backend, no accounts, nothing leaves the device.
+
+It's verified to type-check and bundle cleanly (`npx tsc --noEmit`, `npx expo export --platform ios`) but publishing it requires your own Apple Developer and Expo accounts. See **[`mobile/DEPLOY.md`](mobile/DEPLOY.md)** for the exact steps from here to an App Store submission.
